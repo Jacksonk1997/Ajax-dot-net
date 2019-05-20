@@ -1,2 +1,4 @@
 # hello-world
-test my program
+Hi Humans!
+
+This is my first repository,I want to learn code.
