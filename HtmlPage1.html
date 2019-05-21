@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+     <script src=" jquery-1.9.1.min.js">  </script>
+    <script>
+        function searchfun() {
+            var p = $("#province").val();
+            var c = $("#city").val();
+            $("#msg").html("省份;" + p + "城市:" + c);
+            var s = "province=" + escape(p) + "&city=" + escape(c);
+            frm.window.location.href = "server1.ashx?" + s;
+        }
+    </script>
+</head>
+<body style="background-color:#F5F5DC">
+    省份<input type="text" id="province" value="" style="width:50px" />
+    城市<input type="text" id="city" value="" style="width:50px" />
+    <input type="button" value="查看" onclick="searchfun()" />
+    <span id="msg"></span><br />
+    <iframe name="frm" id="frm" src="" style=" width:400px;height:150px"></iframe>
+</body>
+</html>

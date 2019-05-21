@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        function change_fun() {
+            var a = new Array("北京", "天津", "上海", "重庆");
+            var b = new Array("武汉", "洪湖", "宜昌", "随州", "沙市");
+            var x = $("#plist option:selected").text();
+            if (x == "直辖市") {
+                $("#clist").empty();
+                for (var i = 0; i < a.length; i++)
+                    $("<option value=" + a[i] + ">" + a[i] + "</option>").appendTo("#clist");
+            }
+            else {
+                $("#clist").empty();
+                for(var i=0;i<b.length;i++)
+                    $("<option value=" + b[i] + ">" + b[i] + "</option>").appendTo("#clist");
+            }
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <style type="text/css">
+        #clist {
+            width: 88px;
+        }
+        #plist {
+            width: 95px;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+<body style="background-color:darkgray">
+
+    <select id="plist" onchange="change_fun()" class="auto-style1">
+        <option>直辖市</option>
+        <option>湖北</option>
+
+    </select>
+    <select id="clist" class="auto-style2"></select>
+
+
+</body>
+</html>

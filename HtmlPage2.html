@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="jquery-1.9.1.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#myimg").hover(function () {
+                $(this).find("#pic").fadeOut(2000);
+            }, function () {
+                if($("#pic").attr("src")=="images/sample2.jpg")
+                    $("#pic").attr("src","images/sample3.jpg");
+                else
+                    $("#pic").attr("src","images/sample2.jpg");
+                $("#pic").fadeIn(1500);
+            
+           })//hover结束
+        });//document结束
+
+
+
+
+
+    </script>
+    
+</head>
+<body style="background-color:darkgray">
+    <div id="myimg">
+        <img id="pic" src="images/sample2.jpg" alt="广告图" />
+
+
+
+    </div>
+
+</body>
+</html>
